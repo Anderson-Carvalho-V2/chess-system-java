@@ -23,6 +23,10 @@ public class Progam {
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
 				
+				boolean [][] PossibleMoves = chessMatch.possibleMoves(source);
+				UI.clearScreen();
+				UI.printBoard(chessMatch.getPieces(), PossibleMoves);
+				
 				System.out.println();
 				System.out.print("Target: ");
 				ChessPosition target = UI.readChessPosition(sc);
@@ -38,6 +42,5 @@ public class Progam {
 				sc.nextLine();
 			}
 		}
-
 	}
 }
